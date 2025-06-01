@@ -35,7 +35,7 @@ export class LoginComponent {
     this.isLoading = true;
     const { email, password, company } = this.loginForm.value;
 
-    setTimeout(() => {  // simulate async call
+    setTimeout(() => {  
       const success = this.authService.login(email, password, company);
       this.isLoading = false;
       if (success) {
