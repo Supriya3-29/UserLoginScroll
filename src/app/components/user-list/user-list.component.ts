@@ -23,7 +23,6 @@ export class UserListComponent implements OnInit {
 
   loadUsers() {
     this.userService.getUsers().subscribe(users => {
-      // Duplicate to simulate 100 users for demo
       this.allUsers = Array(10).fill(users).flat();
       this.loadBatch();
     });
@@ -57,9 +56,7 @@ export class UserListComponent implements OnInit {
   }
 
   logout() {
-    // Clear user authentication data (localStorage/sessionStorage, cookies, etc)
-    localStorage.removeItem('authToken'); // example
-    // Redirect to login page or home page
+    localStorage.removeItem('authToken'); 
     this.router.navigate(['/login']);
   }
   
