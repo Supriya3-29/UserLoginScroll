@@ -1,0 +1,10 @@
+<!-- Logout button outside the scrollable user list -->
+<button class="logout-button" (click)="logout()">Logout</button>
+
+<div class="user-list">
+  <div *ngFor="let user of users" class="user-card">
+    <h3>{{ user.name }}</h3>
+    <p>{{ user.email }}</p>
+    <p>{{ user.username }}</p>
+  </div>
+</div>
